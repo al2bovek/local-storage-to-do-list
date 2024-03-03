@@ -24,10 +24,9 @@ inputAdd.addEventListener('click', () => {
         location.reload();
     } else {text.textContent = '"click click" task for edit';}
 });
-
 const inputClear = document.createElement('button');
 inputClear.textContent = 'clear';
-inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = 'input was cleared';});
+inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = 'click task for edit';});
 const inputClose = document.createElement('button');
 inputClose.addEventListener('click', () => { inputDialog.open = false; inputData.value = ''; text.textContent = '"click click" task for edit'});
 inputClose.textContent = 'exit';

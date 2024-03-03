@@ -8,8 +8,6 @@ header.classList = "header";
 const text = document.createElement('p');
 fillTaskList();
 export default function fillTaskList() {
-    
-
 if(localData.length !== 0) {
     for(let el of localData) {
         const task = document.createElement('li');
@@ -24,5 +22,4 @@ if(localData.length !== 0) {
 }
 }
 document.body.prepend(header, text, tasksList, deleteAllTasks);
-
 export {text, tasksList}
