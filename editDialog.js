@@ -24,7 +24,7 @@ closeEdit.textContent = 'close';
 closeEdit.addEventListener('click', () => {editDialog.open = false});
 const deleteTask = document.createElement('button');
 deleteTask.textContent = 'delete';
-deleteTask.addEventListener('click', () => {editDialog.open = false; goal.textContent = 'task was deleted'; let localData = JSON.parse(localStorage.getItem('input')); localData.splice(localData[localData.indexOf(goal)], 1); console.log(localData); localStorage.setItem('input', JSON.stringify(localData)); location.reload()});
+deleteTask.addEventListener('click', () => {editDialog.open = false; goal.textContent = 'task was deleted'; let localData = JSON.parse(localStorage.getItem('input')); localData.splice(count, 1); console.log(localData); localStorage.setItem('input', JSON.stringify(localData)); location.reload()});
 
 editDialog.append(deleteTask, editInput, saveEdit, clearEdit, closeEdit);
 document.body.prepend(editDialog);
