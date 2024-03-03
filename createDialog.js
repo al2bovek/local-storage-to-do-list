@@ -27,7 +27,7 @@ inputAdd.addEventListener('click', () => {
 
 const inputClear = document.createElement('button');
 inputClear.textContent = 'clear';
-inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = 'click task for edit';});
+inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = 'input was cleared';});
 const inputClose = document.createElement('button');
 inputClose.addEventListener('click', () => { inputDialog.open = false; inputData.value = ''; text.textContent = '"click click" task for edit'});
 inputClose.textContent = 'exit';
