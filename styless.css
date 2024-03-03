@@ -1,0 +1,50 @@
+* {
+    margin: 0.33rem;
+    padding: 0.33rem;
+    background-color: gainsboro;
+    text-align: center;
+}
+body {
+    position: relative;
+}
+.header {
+    color: brown;
+}
+dialog {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    height: 3rem;
+    color: gray;
+    border-radius: 0.33rem;
+    
+}
+input {
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+button {
+    color: blueviolet;
+    background-color: whitesmoke;
+    border-color: blueviolet;
+    border-radius: 0.33rem;
+    font-size: 1.2rem;
+    
+}
+.list {
+    font-size: 1.5rem;
+    color: darkred;
+}
+.input {
+    color: green;
+    font-size: 1.2rem;
+    height: 2rem;
+    border-radius: 0.33rem;
+}
+.delete-all {
+    color: crimson;
+    font-size: 1.2rem;
+    height: 2rem;
+    border-radius: 0.33rem;
+}
