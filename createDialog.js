@@ -1,10 +1,9 @@
-import fillTaskList from "./tasksList.js";
-import {text, tasksList} from "./tasksList.js";
+import {text} from "./tasksList.js";
 const inputDialog = document.createElement('dialog');
 const inputOpen = document.createElement('button');
 inputOpen.classList = "input";
 inputOpen.textContent = 'create new task';
-inputOpen.addEventListener('click', () =>{inputDialog.open = true; {once: true}});
+inputOpen.addEventListener('click', () => {inputDialog.open = true; {once: true}});
 const inputData = document.createElement('input');
 inputData.placeholder = "input task";
 const inputAdd = document.createElement('button');
@@ -21,14 +20,14 @@ inputAdd.addEventListener('click', () => {
         inputData.value = '';
         inputDialog.open = false;
         location.reload();
-    } else {text.textContent = '"click click" task for edit';}
+    } else text.textContent = '"click click" task for edit';
 });
 const inputClear = document.createElement('button');
 inputClear.textContent = 'clear';
-inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = 'click task for edit';});
+inputClear.addEventListener('click', () => {inputData.value = ''; text.textContent = '"click click" task for edit'});
 const inputClose = document.createElement('button');
 inputClose.addEventListener('click', () => { inputDialog.open = false; inputData.value = ''; text.textContent = '"click click" task for edit'});
 inputClose.textContent = 'exit';
 inputDialog.append(inputData, inputAdd, inputClear, inputClose);
-document.body.prepend(inputDialog, inputOpen);
+document.body.prepend(inputOpen);
 export {inputDialog}

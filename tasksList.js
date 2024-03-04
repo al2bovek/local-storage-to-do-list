@@ -6,8 +6,7 @@ const header = document.createElement('h1');
 header.textContent = 'Tasks lisT';
 header.classList = "header";
 const text = document.createElement('p');
-fillTaskList();
-export default function fillTaskList() {
+export default (function fillTaskList() {
     if(localData.length !== 0) {
         const toStart = [...localData].reverse();
         for(let el of toStart) {
@@ -21,6 +20,6 @@ export default function fillTaskList() {
         text.textContent = 'your tasks list is empty';
         text.style = "font-size: 1.1rem; color: red";
     }
-}
+})();
 document.body.prepend(header, text, tasksList, deleteAllTasks);
 export {text, tasksList}
