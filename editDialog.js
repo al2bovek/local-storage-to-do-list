@@ -6,15 +6,16 @@ tasksList.addEventListener('dblclick', ev => {
     editDialog.open = true;
     editInput.value = ev.target.textContent;
     goal = ev.target;
-    count = localData.indexOf(goal.textContent)
+    count = localData.indexOf(goal.textContent);
+    editInput.focus();
 });
 const editInput = document.createElement('input');
 const saveEdit = document.createElement('button');
 saveEdit.textContent = 'save and exit';
-saveEdit.addEventListener('click', () => {if(editInput.value) {editDialog.open = false; goal.textContent = editInput.value; const localData = JSON.parse(localStorage.getItem('input')).fill(editInput.value, count, count + 1); localStorage.setItem('input', JSON.stringify(localData)); location.reload()}});
+saveEdit.addEventListener('click', () => {if(editInput.value) {editDialog.open = false; goal.textContent = editInput.value; const localData = JSON.parse(localStorage.getItem('input')).fill(editInput.value, count, count + 1); localStorage.setItem('input', JSON.stringify(localData)); location.reload()} else editInput.focus()});
 const clearEdit = document.createElement('button');
 clearEdit.textContent = 'clear';
-clearEdit.addEventListener('click', () => {editInput.value = ''; editInput.placeholder = 'input task'});
+clearEdit.addEventListener('click', () => {editInput.value = ''; editInput.placeholder = 'input task'; editInput.focus()});
 const closeEdit = document.createElement('button');
 closeEdit.textContent = 'close';
 closeEdit.addEventListener('click', () => editDialog.open = false);
