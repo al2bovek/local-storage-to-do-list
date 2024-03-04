@@ -15,7 +15,6 @@ inputAdd.addEventListener('click', () => {
         text.textContent = '"click click" task for edit';
         text.style = "font-size: 1.1rem; color: green";
         task.textContent = inputData.value;
-        tasksList.append(task);
         const localData = JSON.parse(localStorage.getItem('input'));
         localData.push(inputData.value);
         localStorage.setItem('input', JSON.stringify(localData));

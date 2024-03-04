@@ -6,5 +6,6 @@ deleteAllTasks.addEventListener('dblclick', () => {
     tasksList.innerHTML = [];
     const localData = [];
     localStorage.setItem('input', JSON.stringify(localData));
+    location.reload();
 });
 export {deleteAllTasks}
