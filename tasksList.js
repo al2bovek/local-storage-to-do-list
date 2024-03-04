@@ -14,11 +14,11 @@ export default (function fillTaskList() {
             task.textContent = el;
             tasksList.append(task);
             text.textContent = '"click click" task for edit';
-            text.style = "font-size: 1.1rem; color: green";
+            text.style = "color: green";
         }
     } else {
         text.textContent = 'your tasks list is empty';
-        text.style = "font-size: 1.1rem; color: red";
+        text.style = "color: gray";
     }
 })();
 document.body.prepend(header, text, tasksList, deleteAllTasks);

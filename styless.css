@@ -10,6 +10,9 @@ body {
 .header {
     color: brown;
 }
+p {
+    font-size: 1.3rem;
+}
 dialog {
     position: absolute;
     margin: auto;

@@ -20,6 +20,6 @@ closeEdit.textContent = 'close';
 closeEdit.addEventListener('click', () => editDialog.open = false);
 const deleteTask = document.createElement('button');
 deleteTask.textContent = 'delete';
-deleteTask.addEventListener('click', () => {editDialog.open = false; goal.textContent = 'task was deleted'; const localData = JSON.parse(localStorage.getItem('input')); localData.splice(count, 1); localStorage.setItem('input', JSON.stringify(localData)); location.reload()});
+deleteTask.addEventListener('click', () => {editDialog.open = false; goal.textContent = 'task was deleted'; goal.style = "color: red"; const localData = JSON.parse(localStorage.getItem('input')); localData.splice(count, 1); localStorage.setItem('input', JSON.stringify(localData)); setInterval(() => location.reload(), 1000)});
 editDialog.append(deleteTask, editInput, saveEdit, clearEdit, closeEdit);
 export {editDialog}
