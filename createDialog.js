@@ -22,6 +22,7 @@ inputAdd.addEventListener('click', () => {
         location.reload();
     } else {text.textContent = '"click click" task for edit'; inputData.focus()}  
 });
+inputData.addEventListener('keypress', ev => {if(ev.key === "Enter") inputAdd.click()});
 const inputClear = document.createElement('button');
 inputClear.textContent = 'clear';
 inputClear.addEventListener('click', () => {inputData.value = ''; inputData.focus();text.textContent = '"click click" task for edit'});
